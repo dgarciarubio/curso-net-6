@@ -99,7 +99,7 @@ dotnet sln ejercicio10.sln list
 Proyectos
 ---------
 console\console.csproj
-MiLibreria\MiLibreria.csproj
+MiLibreria1\MiLibreria1.csproj
 MiLibreria2\MiLibreria2.csproj
 ```
 
@@ -109,22 +109,23 @@ Si vamos a ver las referencias de los demás proyectos veremos que:
 $ dotnet list console/console.csproj reference
 Referencias de proyecto
 -----------------------
-..\MiLibreria\MiLibreria.csproj
+..\MiLibreria1\MiLibreria1.csproj
+..\MiLibreria2\MiLibreria2.csproj
 
-$ dotnet list MiLibreria/MiLibreria.csproj reference
+$ dotnet list MiLibreria1/MiLibreria1.csproj reference
 Referencias de proyecto
 -----------------------
-..\MiLibreria2\MiLibreria2.csproj
+No hay referencias
 
 $ dotnet list MiLibreria2/MiLibreria2.csproj reference
 Referencias de proyecto
 -----------------------
-..\MiLibreria\MiLibreria.csproj
+..\console\console.csproj
 ```
 
-Por tanto, la librería MiLibreria llama a Libreria2 y viceversa. Si borramos la dependencia de MiLibreria en MiLibreria2 quedaría todo solucionado:
+Por tanto, la librería MiLibreria2 referencia al proyecto de consola y viceversa. Si borramos la dependencia de console en MiLibreria2 quedaría todo solucionado:
 
 ```bash
-$ dotnet remove MiLibreria2/MiLibreria2.csproj reference MiLibreriaMiLibreria.csproj
+$ dotnet remove MiLibreria2/MiLibreria2.csproj reference ..\console\console.csproj
 $ dotnet build ejercicio10.sln
 ```
