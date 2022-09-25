@@ -1,0 +1,93 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Contacts API",
+		"_postman_id": "8e303a36-ea75-f5d8-96e4-a5ad5ecd6d51",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET Contacts",
+			"request": {
+				"url": "https://localhost:9449/contacts",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GET Contact",
+			"request": {
+				"url": "https://localhost:9449/contacts/3",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CREATE Contact",
+			"request": {
+				"url": "https://localhost:9449/contacts",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Pepe\",\n\t\"telephoneNumber\": \"644565656\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Contact",
+			"request": {
+				"url": "https://localhost:9449/contacts/1",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Pepe\",\n\t\"telephoneNumber\": \"644565656\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE Contact",
+			"request": {
+				"url": "https://localhost:9449/contacts/1",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 1,\n\t\"name\": \"Pepe\",\n\t\"telephoneNumber\": \"644565656\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
