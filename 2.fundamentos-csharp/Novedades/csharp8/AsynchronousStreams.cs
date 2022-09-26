@@ -8,13 +8,13 @@ public class AsynchronousStreams
 {
     public static async Task DoWork()
     {
-        await foreach (var data in GetData(100))
+        await foreach (var data in GetDataAsync(100))
         {
             Console.WriteLine(data);
         }
     }
 
-    private static async IAsyncEnumerable<int> GetData(int size)
+    private static async IAsyncEnumerable<int> GetDataAsync(int size)
     {
         var random = new Random();
 

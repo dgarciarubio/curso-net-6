@@ -8,10 +8,9 @@ public class LocalFunctions
         Multiply,
     }
 
-
     public static int DoStuff(Operation operation, int a, int b)
     {
-        switch(operation)
+        switch (operation)
         {
             case Operation.Sum: return Sum(a, b);
             case Operation.Multiply: return Multiply(a, b);

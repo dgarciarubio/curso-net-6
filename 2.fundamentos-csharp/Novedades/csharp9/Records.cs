@@ -1,6 +1,6 @@
 ﻿namespace Novedades.csharp9;
 
-internal class Records
+internal static class Records
 {
     public static void DoStuff()
     {
@@ -10,7 +10,7 @@ internal class Records
             LastName = "Pérez",
         };
 
-        // person1.FirstName = "Paco"; error de compilación!
+        // person1.FirstName = "Paco"; // error de compilación!
 
         var person2 = new Person()
         {

@@ -15,7 +15,7 @@ public class NullableReferenceTypes
     public NullableReferenceTypes(string? nullableString)
     {
         NullableString = nullableString;
-        NonNullableString = nullableString ?? "Default";
+        NonNullableString = nullableString ?? "Valor";
     }
 
     [return: MaybeNull]

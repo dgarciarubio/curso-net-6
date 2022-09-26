@@ -9,8 +9,7 @@ public class PatternMatching
             throw new ArgumentNullException(nameof(obj));
         }
 
-        if (!(obj is string strValue) || // is expression with assignment
-            !int.TryParse(strValue, out int result))  // out argument with assignment
+        if (!(obj is string strValue)) // is expression with assignment
         {
             throw new ArgumentException("Invalid value", nameof(obj));
         }

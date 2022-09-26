@@ -2,15 +2,15 @@
 
 public class PatternMatching
 {
-    public static void DoMoreStuff(int? number)
+    public static void DoMoreStuff(object? obj)
     {
-        if (number is not null)
+        if (obj is not null)
         {
-            // Do stuff with the number
+            // Do stuff with the object
         }
     }
 
-    public static void DoEvenMoreStuff(int? number)
+    public static void DoEvenMoreStuff(int number)
     {
         if (number is >= 0 and <= 10)
         {

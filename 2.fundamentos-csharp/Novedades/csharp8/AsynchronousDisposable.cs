@@ -7,10 +7,12 @@ public class AsynchronousDisposable
 {
     public static async Task DoDisposableStuff()
     {
-        await using var resource = new DisposableResource();
-        Console.WriteLine("Doing Stuff");
-        resource.DoStuff();
-        Console.WriteLine("Finished doing Stuff");
+        await using (var resource = new DisposableResource())
+        {
+            Console.WriteLine("Doing Stuff");
+            resource.DoStuff();
+            Console.WriteLine("Finished doing Stuff");
+        }
     }
 
     private class DisposableResource : IAsyncDisposable
