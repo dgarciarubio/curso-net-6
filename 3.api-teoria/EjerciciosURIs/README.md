@@ -18,4 +18,3 @@
 * GET /users/?page=2
 * GET /users?page=2&order=ASC
 
-https://quizizz.com/admin/quiz/61b7b1fa82d0fd001e9e1b19/api-urls
