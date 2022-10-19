@@ -2,7 +2,7 @@
 
 public class PatternMatching
 {
-    public static int DoStuff(object obj)
+    public static void DoStuff(object obj)
     {
         if (obj is null) // is expression
         {
@@ -13,8 +13,6 @@ public class PatternMatching
         {
             throw new ArgumentException("Invalid value", nameof(obj));
         }
-
-        return result;
     }
 }
 

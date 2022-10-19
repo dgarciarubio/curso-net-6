@@ -9,6 +9,8 @@ Una empresa de autobuses quiere que sus clientes puedan acceder a la informació
     * nombre
     * DNI 
     * foto de carnét
+    * Teléfono
+    * Dirección de email
 * Cada cliente solo podrá gestionar sus datos. Un administrador podrá gestionar los datos de cualquier cliente. Reflexionar sobre los códigos de respuesta apropiados en caso de que un cliente intente acceder a los datos de otros clientes.
 
 ## Rutas

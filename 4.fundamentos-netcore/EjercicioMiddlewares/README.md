@@ -1,5 +1,0 @@
-1. Con el ejercicio anterior de los servicios, crea un Middleware que saque por consola en mensaje de "Contact created!", cada vez que se cree un contacto nuevo.
-  * Nota: Para sacar algo por la consola de Net6 usa el método ````Console.Writeline("<mensaje>");```
-2. Crea un servicio singleton que contenga un diccionario como variable privada. Para ello usa la clase [Dictionary de C#](https://docs.microsoft.com/es-es/dotnet/api/system.collections.generic.dictionary-2?view=net-6.0) ```Dictionary<int, int>```. Cada vez que se consulte la información de un cliente con un id concreto, guardaremos el registro en el diccionario, anotando en la key del diccionario el Id del cliente y en el valor el número de veces que se ha accedido al cliente.
-* Se puede acceder al objeto ```context.Request.RouteValues``` para ver el valor de los parámetros de ruta.
-* Crea un endpoint llamado "/api/contacts/log/{contactId}" donde devuelva el número de veces que se ha consultado ese contacto. Si no se ha consultado ninguna vez devuelve 0.

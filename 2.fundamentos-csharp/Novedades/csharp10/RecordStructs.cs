@@ -4,34 +4,31 @@ internal class Records
 {
     public static void DoStuff()
     {
-        var person1 = new Person()
+        var dni = new DNI()
         {
-            FirstName = "Pepe",
-            LastName = "Pérez",
+            Value = "50320650P"
         };
 
         // person1.FirstName = "Paco"; error de compilación!
 
-        var person2 = new Person()
+        var dni2 = new DNI()
         {
-            FirstName = "Pepe",
-            LastName = "Pérez",
+            Value = "50320650P"
         };
 
-        if (person1 == person2) //True, comparación por valor
+        if (dni == dni2) //True, comparación por valor
         {
-            var person3 = person2 with { LastName = "Martínez" };
+            var dni3 = dni2 with { Value = "0000000000J" };
 
-            if (person3 == person2) //False, with copia datos sin modificar los originales
+            if (dni3 == dni2) //False, with copia datos sin modificar los originales
             {
                 //No debería estar aquí
             }
         }
     }
 
-    public record struct Person
+    public record struct DNI
     {
-        public string FirstName { get; init; }
-        public string LastName { get; init; }
+        public string Value { get; init; }
     }
 }

@@ -16,7 +16,6 @@ public static class PatternMatching
 
     public class Location
     {
-        public int Number { get; } = 5;
         public Country Country { get; set; }
     }
 
@@ -30,7 +29,7 @@ public static class PatternMatching
     {
         return activity switch
         {
-            { Location.Country: Country.Spain } => activity.Location.Number,
+            { Location.Country: Country.Spain } => 18,
             { Location.Country: Country.USA, Kind: Kind.Drinking } => 21,
             { Location.Country: Country.USA, Kind: Kind.Driving } => 16,
             _ => 20,

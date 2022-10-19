@@ -1,9 +1,9 @@
 ## Clientes:
 
-Cliente: { id: string, name: string, image: string (base64) }
+Cliente: { id: string, name: string, phoneNumber: string, emailAddress: string, image: string (base64) }
 
 * GET /customers?page={page}&pageSize={pageSize} => 
-    * 200 { data: [Cliente], paging: { page: number, pageSize: number, total: number, totalPages: number } }
+    * 200 [Cliente] Cabecera paging: { page: number, pageSize: number, total: number, totalPages: number } }
     * 403 (Si no es administrador)
 * GET /customers/{id} 
     * 200 Cliente
@@ -21,7 +21,7 @@ Cliente: { id: string, name: string, image: string (base64) }
 
 ## Rutas:
 
-Ruta: { id: string, origin: string, destination: string, departureDate: string, arrivalDate: string }
+Ruta: { id: string, origin: string, destination: string }
 Viaje: { id: number, departure: string (fecha formato ISO), arrival: string (fecha formato ISO) }
 Asiento: { id: string, available: boolean, placement: string (window, isle, other), legroom: string (regular, big) }
 
